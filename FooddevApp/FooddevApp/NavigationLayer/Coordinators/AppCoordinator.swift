@@ -9,15 +9,15 @@ import UIKit
 
 class AppCoordinator: Coordinator{
     
-//    private let userStorage = UserStorage.shared
-//    private let factory = SceneFactory.self
+    private let userStorage = UserStorage.shared
+    private let factory = SceneFactory.self
     
     override func start() {
-//        if userStorage.passedOnboarding{
-//            showMainFlow()
-//        } else{
-//            showOnboardingFlow()
-//        }
+        if userStorage.passedOnboarding{
+            showMainFlow()
+        } else{
+            showOnboardingFlow()
+        }
 //        let loginVC = LoginViewController()
 //        navigationController?.pushViewController(loginVC, animated: true)
     }
@@ -30,14 +30,14 @@ class AppCoordinator: Coordinator{
 private extension AppCoordinator{
     func showOnboardingFlow(){
         guard let navigationController = navigationController else { return}
-//        factory.makeOnboardingFlow(coordinato: self, finishDelegate: self, navigationController: navigationController)
+        factory.makeOnboardingFlow(coordinato: self, finishDelegate: self, navigationController: navigationController)
     }
     func showMainFlow(){
         guard let navigationController = navigationController else { return }
         
-//        let tabBarController = factory.makeMainFlow(coordinator: self, finishDelegate: self)
-//        
-//        navigationController.pushViewController(tabBarController, animated: true)
+        let tabBarController = factory.makeMainFlow(coordinator: self, finishDelegate: self)
+        
+        navigationController.pushViewController(tabBarController, animated: true)
     }
 }
 extension AppCoordinator: CoordinatorFinishDelegate{
