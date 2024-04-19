@@ -40,6 +40,7 @@
 		3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */; };
 		3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */; };
 		3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99A2BD2BAEB00BA330C /* UserStorage.swift */; };
+		3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		3281B99A2BD2BAEB00BA330C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		3281B9902BD2AEBC00BA330C /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				3281B99C2BD2BD1B00BA330C /* SceneFactory */,
 				3281B9912BD2AEE800BA330C /* Onboarding */,
 			);
 			path = UILayer;
@@ -242,6 +245,14 @@
 				3281B99A2BD2BAEB00BA330C /* UserStorage.swift */,
 			);
 			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
+		3281B99C2BD2BD1B00BA330C /* SceneFactory */ = {
+			isa = PBXGroup;
+			children = (
+				3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */,
+			);
+			path = SceneFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 				3281B9862BD2A92A00BA330C /* HomeCoordinator.swift in Sources */,
 				3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */,
 				3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */,
+				3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,
 				3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */,
 				3281B9802BD29A8800BA330C /* Coordinator.swift in Sources */,
