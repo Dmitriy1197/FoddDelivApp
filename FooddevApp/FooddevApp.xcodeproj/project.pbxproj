@@ -38,6 +38,7 @@
 		3281B98F2BD2A9ED00BA330C /* TabBarConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B98E2BD2A9ED00BA330C /* TabBarConroller.swift */; };
 		3281B9932BD2AF0A00BA330C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9922BD2AF0A00BA330C /* OnboardingViewController.swift */; };
 		3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */; };
+		3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		3281B98E2BD2A9ED00BA330C /* TabBarConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConroller.swift; sourceTree = "<group>"; };
 		3281B9922BD2AF0A00BA330C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
+		3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +124,9 @@
 		3281B9582BD2946D00BA330C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3281B9982BD2B53000BA330C /* Colors */,
 				3281B9752BD295E300BA330C /* Extensions */,
 				3281B9592BD2947500BA330C /* Fonts */,
-				3281B97A2BD2986100BA330C /* AppColors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,8 +220,17 @@
 			children = (
 				3281B9922BD2AF0A00BA330C /* OnboardingViewController.swift */,
 				3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */,
+				3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3281B9982BD2B53000BA330C /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3281B97A2BD2986100BA330C /* AppColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				3281B98C2BD2A94F00BA330C /* ProfileCoordinator.swift in Sources */,
 				3281B98A2BD2A94300BA330C /* ListCoordinator.swift in Sources */,
 				3281B9862BD2A92A00BA330C /* HomeCoordinator.swift in Sources */,
+				3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,
 				3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */,
 				3281B9802BD29A8800BA330C /* Coordinator.swift in Sources */,
