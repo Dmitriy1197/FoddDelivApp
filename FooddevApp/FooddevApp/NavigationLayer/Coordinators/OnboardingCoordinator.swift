@@ -12,7 +12,7 @@ import UIKit
 class OnboardingCoordinator: Coordinator{
     
     //MARK: - Properties
-//    private let factory = SceneFactory.self
+    private let factory = SceneFactory.self
     
     //MARK: - Methods
     override func start() {
@@ -28,7 +28,7 @@ class OnboardingCoordinator: Coordinator{
 //MARK: - Navigation
 private extension OnboardingCoordinator{
     func showOnboarding(){
-//        let viewController = factory.makeOnboardingScene(coordinator: self)
-//        navigationController?.pushViewController(viewController, animated: true)
+        let viewController = factory.makeOnboardingScene(coordinator: self)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
