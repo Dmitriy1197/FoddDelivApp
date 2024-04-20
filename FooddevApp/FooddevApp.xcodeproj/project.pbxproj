@@ -41,6 +41,8 @@
 		3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */; };
 		3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99A2BD2BAEB00BA330C /* UserStorage.swift */; };
 		3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */; };
+		3281B9A12BD2C19800BA330C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9A02BD2C19800BA330C /* LoginViewController.swift */; };
+		3281B9A62BD2C23600BA330C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9A52BD2C23600BA330C /* BottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		3281B99A2BD2BAEB00BA330C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		3281B9A02BD2C19800BA330C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3281B9A52BD2C23600BA330C /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,20 +219,21 @@
 		3281B9902BD2AEBC00BA330C /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				3281B99F2BD2C16B00BA330C /* Auth Scene */,
 				3281B99C2BD2BD1B00BA330C /* SceneFactory */,
-				3281B9912BD2AEE800BA330C /* Onboarding */,
+				3281B9912BD2AEE800BA330C /* Onboarding Scene */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
 		};
-		3281B9912BD2AEE800BA330C /* Onboarding */ = {
+		3281B9912BD2AEE800BA330C /* Onboarding Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3281B9922BD2AF0A00BA330C /* OnboardingViewController.swift */,
 				3281B9942BD2AF3900BA330C /* OnboardingViewPresenter.swift */,
 				3281B9962BD2B2EF00BA330C /* OnboardingPartViewController.swift */,
 			);
-			path = Onboarding;
+			path = "Onboarding Scene";
 			sourceTree = "<group>";
 		};
 		3281B9982BD2B53000BA330C /* Colors */ = {
@@ -253,6 +258,39 @@
 				3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */,
 			);
 			path = SceneFactory;
+			sourceTree = "<group>";
+		};
+		3281B99F2BD2C16B00BA330C /* Auth Scene */ = {
+			isa = PBXGroup;
+			children = (
+				3281B9A42BD2C20600BA330C /* Presenters */,
+				3281B9A32BD2C1F900BA330C /* Controllers */,
+				3281B9A22BD2C1F300BA330C /* Views */,
+				3281B9A02BD2C19800BA330C /* LoginViewController.swift */,
+			);
+			path = "Auth Scene";
+			sourceTree = "<group>";
+		};
+		3281B9A22BD2C1F300BA330C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3281B9A52BD2C23600BA330C /* BottomView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3281B9A32BD2C1F900BA330C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3281B9A42BD2C20600BA330C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +384,7 @@
 				3281B9822BD2A02400BA330C /* AppCoordinator.swift in Sources */,
 				3281B98F2BD2A9ED00BA330C /* TabBarConroller.swift in Sources */,
 				3281B9932BD2AF0A00BA330C /* OnboardingViewController.swift in Sources */,
+				3281B9A12BD2C19800BA330C /* LoginViewController.swift in Sources */,
 				3281B9882BD2A93900BA330C /* OrderCoordinator.swift in Sources */,
 				3281B9472BD28F1400BA330C /* SceneDelegate.swift in Sources */,
 				3281B98C2BD2A94F00BA330C /* ProfileCoordinator.swift in Sources */,
@@ -355,6 +394,7 @@
 				3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */,
 				3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,
+				3281B9A62BD2C23600BA330C /* BottomView.swift in Sources */,
 				3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */,
 				3281B9802BD29A8800BA330C /* Coordinator.swift in Sources */,
 			);
