@@ -13,21 +13,21 @@ class AppCoordinator: Coordinator{
     private let factory = SceneFactory.self
     
     override func start() {
-//        if userStorage.passedOnboarding{
-//            showMainFlow()
-//        } else{
-//            showOnboardingFlow()
-//        }
-        let loginPresenter = LoginPresenter(coordinator: self)
-        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
-        navigationController?.pushViewController(loginVC, animated: true)
+        if userStorage.passedOnboarding{
+            showAuthFlow()
+        } else{
+            showOnboardingFlow()
+        }
+//        let loginPresenter = LoginPresenter(coordinator: self)
+//        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
+//        navigationController?.pushViewController(loginVC, animated: true)
     }
     override func finish() {
         print("AppCoordinator finish")
     }
 }
 
-//MARK: - Navigations metod
+//MARK: - Navigations metods
 private extension AppCoordinator{
     func showOnboardingFlow(){
         guard let navigationController = navigationController else { return}
@@ -40,6 +40,26 @@ private extension AppCoordinator{
         
         navigationController.pushViewController(tabBarController, animated: true)
     }
+    func showAuthFlow(){
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeAuthScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+   
+}
+
+//MARK: - Methods
+extension AppCoordinator{
+    func showSignInScene(){
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignInScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    func showSignUpScene(){
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignUpScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 extension AppCoordinator: CoordinatorFinishDelegate{
     func coordinatorDidFinish(childCordinator:  CoordinatorProtocol) {
@@ -47,7 +67,7 @@ extension AppCoordinator: CoordinatorFinishDelegate{
         switch childCordinator.type{
         case .onboarding:
             navigationController?.viewControllers.removeAll()
-            showMainFlow()
+            showAuthFlow()
         case .app:
             return
         default:

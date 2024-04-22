@@ -29,7 +29,7 @@ class BottomView: UIView {
     }
     
     private func setupLayout(){
-        self.backgroundColor = AppColors.background
+//        self.backgroundColor = AppColors.background
         setupLabel()
         setupView1()
         setupView2()
