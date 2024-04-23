@@ -106,7 +106,9 @@ private extension OnboardingViewController{
 //        bottomButton.setTitleColor(AppColors.black, for: .normal)
        // bottomButton.layer.cornerRadius = 24
 //        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        bottomButton.action = buttonPressed
+        bottomButton.action = {[weak self] in
+            self?.buttonPressed()
+        }
         bottomButton.scheme = .gray
         
         NSLayoutConstraint.activate([

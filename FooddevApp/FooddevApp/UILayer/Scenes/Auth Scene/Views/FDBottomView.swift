@@ -1,5 +1,5 @@
 //
-//  BottomView.swift
+//  FDBottomView.swift
 //  FooddevApp
 //
 //  Created by Dima on 19.04.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomView: UIView {
+class FDBottomView: UIView {
 
     
     private let label = UILabel()
@@ -101,7 +101,7 @@ class BottomView: UIView {
 
 //MARK: - Actions
 
-private extension BottomView{
+private extension FDBottomView{
     @objc func button1Tapped(){
         button1Action?()
     }
@@ -113,5 +113,5 @@ private extension BottomView{
 
  
 #Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)){
-    BottomView()
+    FDBottomView()
 }

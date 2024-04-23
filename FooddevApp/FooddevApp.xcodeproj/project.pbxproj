@@ -42,7 +42,7 @@
 		3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99A2BD2BAEB00BA330C /* UserStorage.swift */; };
 		3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */; };
 		3281B9A12BD2C19800BA330C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9A02BD2C19800BA330C /* LoginViewController.swift */; };
-		3281B9A62BD2C23600BA330C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9A52BD2C23600BA330C /* BottomView.swift */; };
+		3281B9A62BD2C23600BA330C /* FDBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9A52BD2C23600BA330C /* FDBottomView.swift */; };
 		3281B9AB2BD38AC800BA330C /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9AA2BD38AC800BA330C /* FDButton.swift */; };
 		3281B9B12BD5628D00BA330C /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B02BD5628D00BA330C /* FDTextField.swift */; };
 		3281B9B42BD5653B00BA330C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B32BD5653B00BA330C /* LoginPresenter.swift */; };
@@ -86,7 +86,7 @@
 		3281B99A2BD2BAEB00BA330C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		3281B99D2BD2BD3D00BA330C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		3281B9A02BD2C19800BA330C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3281B9A52BD2C23600BA330C /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		3281B9A52BD2C23600BA330C /* FDBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBottomView.swift; sourceTree = "<group>"; };
 		3281B9AA2BD38AC800BA330C /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
 		3281B9B02BD5628D00BA330C /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		3281B9B32BD5653B00BA330C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		3281B9A22BD2C1F300BA330C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3281B9A52BD2C23600BA330C /* BottomView.swift */,
+				3281B9A52BD2C23600BA330C /* FDBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 				3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */,
 				3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,
-				3281B9A62BD2C23600BA330C /* BottomView.swift in Sources */,
+				3281B9A62BD2C23600BA330C /* FDBottomView.swift in Sources */,
 				3281B9AB2BD38AC800BA330C /* FDButton.swift in Sources */,
 				3281B9952BD2AF3900BA330C /* OnboardingViewPresenter.swift in Sources */,
 				3281B9802BD29A8800BA330C /* Coordinator.swift in Sources */,
