@@ -46,6 +46,7 @@
 		3281B9AB2BD38AC800BA330C /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9AA2BD38AC800BA330C /* FDButton.swift */; };
 		3281B9B12BD5628D00BA330C /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B02BD5628D00BA330C /* FDTextField.swift */; };
 		3281B9B42BD5653B00BA330C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B32BD5653B00BA330C /* LoginPresenter.swift */; };
+		3281B9B62BDB6B5A00BA330C /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B52BDB6B5A00BA330C /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		3281B9AA2BD38AC800BA330C /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
 		3281B9B02BD5628D00BA330C /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		3281B9B32BD5653B00BA330C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		3281B9B52BDB6B5A00BA330C /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				3281B97F2BD29A8800BA330C /* Coordinator.swift */,
 				3281B9812BD2A02400BA330C /* AppCoordinator.swift */,
 				3281B9832BD2A09500BA330C /* OnboardingCoordinator.swift */,
+				3281B9B52BDB6B5A00BA330C /* LoginCoordinator.swift */,
 				3281B9852BD2A92A00BA330C /* HomeCoordinator.swift */,
 				3281B9872BD2A93900BA330C /* OrderCoordinator.swift */,
 				3281B9892BD2A94300BA330C /* ListCoordinator.swift */,
@@ -426,6 +429,7 @@
 				3281B9862BD2A92A00BA330C /* HomeCoordinator.swift in Sources */,
 				3281B9B42BD5653B00BA330C /* LoginPresenter.swift in Sources */,
 				3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */,
+				3281B9B62BDB6B5A00BA330C /* LoginCoordinator.swift in Sources */,
 				3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */,
 				3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,

@@ -9,6 +9,7 @@ import UIKit
 enum CoordinatorType{
     case app
     case onboarding
+    case login
     case home
     case order
     case list

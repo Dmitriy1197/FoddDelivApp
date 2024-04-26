@@ -271,7 +271,9 @@ private extension LoginViewController{
         
         signInButton.setTitle("Sign In")
         signInButton.scheme = .orange
-        signInButton.action = onSignInTapped
+        signInButton.action = {[weak self] in
+            self?.onSignInTapped()
+        }
         switch state{
         case .initial:
             
@@ -310,7 +312,9 @@ private extension LoginViewController{
         
         signUpButton.setTitle("Sign Up")
         signUpButton.scheme = .gray
-        signUpButton.action = onSignUpTapped
+        signUpButton.action = {[weak self] in
+            self?.onSignUpTapped()
+        }
         NSLayoutConstraint.activate([
             signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
             signUpButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
@@ -330,9 +334,10 @@ private extension LoginViewController{
             bottomView.heightAnchor.constraint(equalToConstant: 150)
         ])
         
-        bottomView.button1Action = facebookPress
-        bottomView.button2Action = googlePress
-        
+        bottomView.button1Action = {[weak self] in
+            self?.facebookPress() }
+        bottomView.button2Action = {[weak self] in
+            self?.googlePress() }
     }
     
     func setupLoaderView(){
