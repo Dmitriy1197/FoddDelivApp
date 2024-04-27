@@ -14,11 +14,12 @@ class AppCoordinator: Coordinator{
     
     override func start() {
         if userStorage.passedOnboarding{
-            showMainFlow()
+            showAuthFlow()
         } else{
             showOnboardingFlow()
         }
-//        let loginVC = LoginViewController()
+//        let loginPresenter = LoginPresenter(coordinator: self)
+//        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
 //        navigationController?.pushViewController(loginVC, animated: true)
     }
     override func finish() {
@@ -26,11 +27,12 @@ class AppCoordinator: Coordinator{
     }
 }
 
-//MARK: - Navigations metod
+//MARK: - Navigations metods
 private extension AppCoordinator{
     func showOnboardingFlow(){
         guard let navigationController = navigationController else { return}
-        factory.makeOnboardingFlow(coordinato: self, finishDelegate: self, navigationController: navigationController)
+        let onboardingCoordinator =  factory.makeOnboardingFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        onboardingCoordinator.start()
     }
     func showMainFlow(){
         guard let navigationController = navigationController else { return }
@@ -39,14 +41,26 @@ private extension AppCoordinator{
         
         navigationController.pushViewController(tabBarController, animated: true)
     }
+    func showAuthFlow(){
+        guard let navigationController = navigationController else { return }
+        let loginCoordinator = factory.makeLoginFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        loginCoordinator.start()
+    }
+   
 }
+
+//MARK: - FinishDelegate
+
 extension AppCoordinator: CoordinatorFinishDelegate{
     func coordinatorDidFinish(childCordinator:  CoordinatorProtocol) {
         removeChildCoordinator(childCordinator)
         switch childCordinator.type{
         case .onboarding:
-            navigationController?.viewControllers.removeAll()
+            showAuthFlow()
+            navigationController?.viewControllers = [navigationController?.viewControllers.last ?? UIViewController()]
+        case .login:
             showMainFlow()
+            navigationController?.viewControllers = [navigationController?.viewControllers.last ?? UIViewController()]
         case .app:
             return
         default:

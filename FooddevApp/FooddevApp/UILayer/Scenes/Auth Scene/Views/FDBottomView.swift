@@ -1,5 +1,5 @@
 //
-//  BottomView.swift
+//  FDBottomView.swift
 //  FooddevApp
 //
 //  Created by Dima on 19.04.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomView: UIView {
+class FDBottomView: UIView {
 
     
     private let label = UILabel()
@@ -29,7 +29,7 @@ class BottomView: UIView {
     }
     
     private func setupLayout(){
-        self.backgroundColor = AppColors.background
+//        self.backgroundColor = AppColors.background
         setupLabel()
         setupView1()
         setupView2()
@@ -65,10 +65,12 @@ class BottomView: UIView {
         self.addSubview(view2)
         view2.translatesAutoresizingMaskIntoConstraints = false
         view2.image = UIImage(named:"BottomViewImage")
+        view2.contentMode = .scaleAspectFill
+        view2.clipsToBounds = true
         
         NSLayoutConstraint.activate([
             view2.topAnchor.constraint(equalTo: view1.bottomAnchor, constant: 18),
-            view2.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -282/4),
+            view2.leftAnchor.constraint(equalTo: self.leftAnchor),
             view2.heightAnchor.constraint(equalToConstant: 150),
             view2.widthAnchor.constraint (equalToConstant: 282)
         ])
@@ -101,7 +103,7 @@ class BottomView: UIView {
 
 //MARK: - Actions
 
-private extension BottomView{
+private extension FDBottomView{
     @objc func button1Tapped(){
         button1Action?()
     }
@@ -113,5 +115,5 @@ private extension BottomView{
 
  
 #Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)){
-    BottomView()
+    FDBottomView()
 }
