@@ -63,25 +63,25 @@ struct SceneFactory{
     
     static func makeMainFlow(coordinator: AppCoordinator, finishDelegate: CoordinatorFinishDelegate) -> TabBarController{
         let homeNavigationConroller = UINavigationController()
-        homeNavigationConroller.tabBarItem = UITabBarItem(title: "Home", image: UIImage.init(systemName: "homekit"), tag: 0)
+        homeNavigationConroller.tabBarItem = UITabBarItem(title: "Home", image: UIImage(resource: .home), tag: 0)
         let homeCoordinator = HomeCoordinator(type: .home, navigationController: homeNavigationConroller)
         homeCoordinator.finishDelegate = finishDelegate
         homeCoordinator.start()
         
         let orderNavigationConroller = UINavigationController()
-        orderNavigationConroller.tabBarItem = UITabBarItem(title: "Order", image: UIImage.init(systemName: "list.bullet.clipboard") , tag: 1)
+        orderNavigationConroller.tabBarItem = UITabBarItem(title: "Order", image: UIImage(resource: .order) , tag: 1)
         let orderCoordinator = OrderCoordinator(type: .order, navigationController: orderNavigationConroller)
         orderCoordinator.finishDelegate = finishDelegate
         orderCoordinator.start()
         
         let listNavigationConroller = UINavigationController()
-        listNavigationConroller.tabBarItem = UITabBarItem(title: "List", image: UIImage.init(systemName: "bookmark.circle"), tag: 2)
+        listNavigationConroller.tabBarItem = UITabBarItem(title: "List", image: UIImage(resource: .list), tag: 2)
         let listCoordinator = ListCoordinator(type: .list, navigationController: listNavigationConroller)
         listCoordinator.finishDelegate = finishDelegate
         listCoordinator.start()
         
         let profileNavigationConroller = UINavigationController()
-        profileNavigationConroller.tabBarItem = UITabBarItem(title: "Profile", image: UIImage.init(systemName: "person.fill.viewfinder"), tag: 3)
+        profileNavigationConroller.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(resource: .profile), tag: 3)
         let profileCoordinator = ProfileCoordinator(type: .home, navigationController: profileNavigationConroller)
         profileCoordinator.finishDelegate = finishDelegate
         profileCoordinator.start()

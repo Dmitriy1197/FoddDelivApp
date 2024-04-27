@@ -13,14 +13,12 @@ class AppCoordinator: Coordinator{
     private let factory = SceneFactory.self
     
     override func start() {
-        if userStorage.passedOnboarding{
-            showAuthFlow()
-        } else{
-            showOnboardingFlow()
-        }
-//        let loginPresenter = LoginPresenter(coordinator: self)
-//        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
-//        navigationController?.pushViewController(loginVC, animated: true)
+        //        if userStorage.passedOnboarding{
+        //            showAuthFlow()
+        //        } else{
+        //            showOnboardingFlow()
+        //        }
+        showMainFlow()
     }
     override func finish() {
         print("AppCoordinator finish")
@@ -46,7 +44,7 @@ private extension AppCoordinator{
         let loginCoordinator = factory.makeLoginFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
         loginCoordinator.start()
     }
-   
+    
 }
 
 //MARK: - FinishDelegate
