@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         view.backgroundColor = AppColors.background
         let label = UILabel()
         view.addSubview(label)
-        label.text = "Hello world!"
+        label.text = "Hello world1"
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
