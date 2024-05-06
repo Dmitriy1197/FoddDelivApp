@@ -47,6 +47,10 @@
 		3281B9B12BD5628D00BA330C /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B02BD5628D00BA330C /* FDTextField.swift */; };
 		3281B9B42BD5653B00BA330C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B32BD5653B00BA330C /* LoginPresenter.swift */; };
 		3281B9B62BDB6B5A00BA330C /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281B9B52BDB6B5A00BA330C /* LoginCoordinator.swift */; };
+		32F128782BDEB114005E6D16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F128772BDEB114005E6D16 /* HomeViewController.swift */; };
+		32F1287B2BDEBC00005E6D16 /* SmallHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1287A2BDEBC00005E6D16 /* SmallHCollectionViewCell.swift */; };
+		32F128E22BE8F493005E6D16 /* BigHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F128E12BE8F493005E6D16 /* BigHCollectionViewCell.swift */; };
+		32F128E42BE8F980005E6D16 /* BigVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F128E32BE8F980005E6D16 /* BigVCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		3281B9B02BD5628D00BA330C /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		3281B9B32BD5653B00BA330C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		3281B9B52BDB6B5A00BA330C /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		32F128772BDEB114005E6D16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		32F1287A2BDEBC00005E6D16 /* SmallHCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallHCollectionViewCell.swift; sourceTree = "<group>"; };
+		32F128E12BE8F493005E6D16 /* BigHCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigHCollectionViewCell.swift; sourceTree = "<group>"; };
+		32F128E32BE8F980005E6D16 /* BigVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigVCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +323,7 @@
 		3281B9A92BD38A9100BA330C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				32F128732BDEB0CD005E6D16 /* Home Scene */,
 				3281B99F2BD2C16B00BA330C /* Auth Scene */,
 				3281B9912BD2AEE800BA330C /* Onboarding Scene */,
 			);
@@ -327,6 +336,49 @@
 				3281B9B32BD5653B00BA330C /* LoginPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		32F128732BDEB0CD005E6D16 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				32F128762BDEB0F2005E6D16 /* Views */,
+				32F128752BDEB0E6005E6D16 /* Controllers */,
+				32F128742BDEB0D4005E6D16 /* Presenters */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
+		32F128742BDEB0D4005E6D16 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		32F128752BDEB0E6005E6D16 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				32F128772BDEB114005E6D16 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		32F128762BDEB0F2005E6D16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32F128792BDEBBCD005E6D16 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32F128792BDEBBCD005E6D16 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				32F1287A2BDEBC00005E6D16 /* SmallHCollectionViewCell.swift */,
+				32F128E12BE8F493005E6D16 /* BigHCollectionViewCell.swift */,
+				32F128E32BE8F980005E6D16 /* BigVCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +466,7 @@
 			files = (
 				3281B9492BD28F1400BA330C /* ViewController.swift in Sources */,
 				3281B9452BD28F1400BA330C /* AppDelegate.swift in Sources */,
+				32F1287B2BDEBC00005E6D16 /* SmallHCollectionViewCell.swift in Sources */,
 				3281B9772BD2960A00BA330C /* UIFont+Extension.swift in Sources */,
 				3281B97B2BD2986100BA330C /* AppColors.swift in Sources */,
 				3281B9842BD2A09500BA330C /* OnboardingCoordinator.swift in Sources */,
@@ -423,13 +476,16 @@
 				3281B9932BD2AF0A00BA330C /* OnboardingViewController.swift in Sources */,
 				3281B9A12BD2C19800BA330C /* LoginViewController.swift in Sources */,
 				3281B9882BD2A93900BA330C /* OrderCoordinator.swift in Sources */,
+				32F128782BDEB114005E6D16 /* HomeViewController.swift in Sources */,
 				3281B9472BD28F1400BA330C /* SceneDelegate.swift in Sources */,
 				3281B98C2BD2A94F00BA330C /* ProfileCoordinator.swift in Sources */,
+				32F128E42BE8F980005E6D16 /* BigVCollectionViewCell.swift in Sources */,
 				3281B98A2BD2A94300BA330C /* ListCoordinator.swift in Sources */,
 				3281B9862BD2A92A00BA330C /* HomeCoordinator.swift in Sources */,
 				3281B9B42BD5653B00BA330C /* LoginPresenter.swift in Sources */,
 				3281B9972BD2B2EF00BA330C /* OnboardingPartViewController.swift in Sources */,
 				3281B9B62BDB6B5A00BA330C /* LoginCoordinator.swift in Sources */,
+				32F128E22BE8F493005E6D16 /* BigHCollectionViewCell.swift in Sources */,
 				3281B99B2BD2BAEB00BA330C /* UserStorage.swift in Sources */,
 				3281B99E2BD2BD3D00BA330C /* SceneFactory.swift in Sources */,
 				3281B9792BD2982800BA330C /* UIColor+Extension.swift in Sources */,
